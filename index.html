@@ -96,6 +96,9 @@
 
                             for (var j=0; j < questions[questionIndex].answers.length; j++) {
                             document.write("<input type=radio id=myRadio name=radAnswer>" + questions[questionIndex].answers[j] + "<br />");
+                            if (document.querySelector("#myRadio:checked") === questions[questionIndex].correct_answer) {
+                                document.querySelector("<h3>").innerText = "Correct Answer";
+                            }
                            
                            
                             }
@@ -121,7 +124,7 @@
                             return "Select Answer"
                         }
                     
-                        if (userAnswer === questions[questionIndex].correct_answers) {
+                        if (userAnswer === questions[questionIndex].correct_answer) {
                         var message = document.querySelector("#results").innerText = "Correct Answer";
                         
                 
