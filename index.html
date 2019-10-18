@@ -115,16 +115,16 @@
                     var userAnswer,
                     element = document.querySelector('#myRadio:checked');
                     if (element !== null) {
-                        userAnswer = element.value;
+                        userAnswer = element.checked;
                         } else {
                             userAnswer = null;
                             return "Select Answer"
                         }
-                    for (var i=0; i < questions[questionIndex].correct_answers.length; i++){
-                        if (userAnswer === questions[questionIndex].correct_answers[i]) {
+                    
+                        if (userAnswer === questions[questionIndex].correct_answers) {
                         var message = document.querySelector("#results").innerText = "Correct Answer";
                         
-                    }
+                
                         
                         
                     }
